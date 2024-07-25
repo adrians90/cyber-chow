@@ -15,7 +15,7 @@ const MobileNav = () => {
       <SheetTrigger>
         <Menu className="text-[#FFFF00] hover:text-[#ffff00]/60" />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="space-y-3">
         <SheetTitle>
           <span>Welcome to Cyber Chow!</span>
         </SheetTitle>

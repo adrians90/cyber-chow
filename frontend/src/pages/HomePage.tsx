@@ -15,7 +15,7 @@ const HomePage = () => {
         <img src={landingImg} className="rounded-lg shadow-lg" />
         <div className="flex flex-col items-center justify-center gap-4 text-center">
           <span className="font-bold text-3xl tracking-tighter">
-            Order takeway even faster!
+            Grab your takeaway in a flash!
           </span>
           <span className="text-zinc-950">
             Download the <span className="font-bold italic">Cyber Chow</span>{" "}

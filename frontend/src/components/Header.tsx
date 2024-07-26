@@ -10,7 +10,7 @@ const Header = () => {
           to="/"
           className="text-3xl font-bold tracking-tight text-[#FFFF00]"
         >
-          Cyber <span className="animate-pulse transition">Chow</span>
+          <span className="animate-pulse transition">Cyber Chow</span>
         </Link>
         <div className="md:hidden">
           <MobileNav />

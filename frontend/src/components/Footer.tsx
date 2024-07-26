@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="bg-[#000000] shadow-lg py-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <Link to="/">
-          <span className="text-3xl text-[#FFFF00] font-bold tracking-tight animate-pulse transition-all">
+          <span className="text-3xl text-[#FFFF00] font-bold tracking-tight">
             Cyber Chow
           </span>
         </Link>

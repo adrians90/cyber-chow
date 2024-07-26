@@ -3,7 +3,7 @@ import appDownloadImg from "../assets/appDownload.png";
 const HomePage = () => {
   return (
     <div className="flex flex-col gap-12">
-      <div className="bg-zinc-50 rounded-lg shadow-lg py-8 flex flex-col gap-5 text-center -mt-16">
+      <div className="bg-gradient-to-t from-zinc-50 via-violet-100 to-violet-300 rounded-lg shadow-lg py-8 flex flex-col gap-5 text-center -mt-16">
         <h1 className="text-5xl font-bold tracking-tight">
           Night City's preem kibble
         </h1>
@@ -15,12 +15,15 @@ const HomePage = () => {
         <img src={landingImg} className="rounded-lg shadow-lg" />
         <div className="flex flex-col items-center justify-center gap-4 text-center">
           <span className="font-bold text-3xl tracking-tighter">
-            Grab your takeaway in a flash!
+            Grab your takeaway in a{" "}
+            <span className="text-violet-600 animate-ping transition-all italic">
+              flash!
+            </span>
           </span>
           <span className="text-zinc-950">
-            Download the <span className="font-bold italic">Cyber Chow</span>{" "}
-            app from the corpo store{" "}
-            <span className="font-bold italic">now</span>
+            <span className="font-bold">Download</span> the{" "}
+            <span className="font-bold italic">Cyber Chow</span> app from the
+            corpo store <span className="font-bold italic">now</span>
           </span>
           <img src={appDownloadImg} />
         </div>

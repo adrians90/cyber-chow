@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import MobileNav from "./MobileNav";
 import MainNav from "./MainNav";
+import { GiChopsticks } from "react-icons/gi";
 
 const Header = () => {
   return (
@@ -10,8 +11,14 @@ const Header = () => {
           to="/"
           className="text-3xl font-bold tracking-tight text-[#FFFF00]"
         >
-          <span className="animate-pulse transition">Cyber Chow</span>
+          <div className="flex items-center">
+            <div>Cyber Chow</div>
+            <span className="text-[#FFFF00] text-3xl">
+              <GiChopsticks />
+            </span>
+          </div>
         </Link>
+
         <div className="md:hidden">
           <MobileNav />
         </div>

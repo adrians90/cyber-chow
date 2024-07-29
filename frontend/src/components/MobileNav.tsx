@@ -30,11 +30,14 @@ const MobileNav = () => {
           )}
         </SheetTitle>
         <Separator />
-        <SheetDescription className="flex flex-col gap-3">
+        <SheetDescription className="flex flex-col gap-4">
           {isAuthenticated ? (
             <MobileNavLinks />
           ) : (
-            <Button className="flex-1 font-bold bg-[#000000] text-[#FFFF00]">
+            <Button
+              onClick={() => loginWithRedirect()}
+              className="flex-1 font-bold bg-[#000000] text-[#FFFF00]"
+            >
               Log In
             </Button>
           )}

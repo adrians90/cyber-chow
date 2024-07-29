@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const MobileNavLinks = () => {
+  const { logout } = useAuth0();
   return (
     <>
       <Link
@@ -10,7 +12,10 @@ const MobileNavLinks = () => {
       >
         Digital Identity
       </Link>
-      <Button className="flex items-center px-3 font-bold bg-zinc-950 text-[#FFFF00]">
+      <Button
+        onClick={() => logout()}
+        className="flex items-center px-3 font-bold bg-zinc-950 text-[#FFFF00]"
+      >
         Let's Delta
       </Button>
     </>

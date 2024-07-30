@@ -10,6 +10,8 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import LoadingButton from "@/components/LoadingButton";
+import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
   email: z.string().optional(),
@@ -105,6 +107,13 @@ const UserProfileForm = ({ onSave, isLoading }: Props) => {
             )}
           />
         </div>
+        {isLoading ? (
+          <LoadingButton />
+        ) : (
+          <Button type="submit" className="bg-zinc-950 text-[#FFFF00]">
+            Submit
+          </Button>
+        )}
       </form>
     </Form>
   );

@@ -1,5 +1,5 @@
 import { Checkbox } from "@/components/ui/checkbox";
-import { FormControl, FormItem } from "@/components/ui/form";
+import { FormControl, FormItem, FormLabel } from "@/components/ui/form";
 import { ControllerRenderProps, FieldValues } from "react-hook-form";
 
 type Props = {
@@ -25,6 +25,7 @@ const CuisineCheckbox = ({ cuisine, field }: Props) => {
           }}
         />
       </FormControl>
+      <FormLabel className="text-sm font-normal">{cuisine}</FormLabel>
     </FormItem>
   );
 };

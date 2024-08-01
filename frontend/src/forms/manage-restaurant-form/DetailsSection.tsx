@@ -15,7 +15,7 @@ const DetailsSection = () => {
     <div className="space-y-2">
       <div>
         <h2 className="text-2xl font-bold">Details</h2>
-        <FormDescription>Enter your restaurant's details</FormDescription>
+        <FormDescription>Enter your cyber canteen's details</FormDescription>
       </div>
       <FormField
         control={control}

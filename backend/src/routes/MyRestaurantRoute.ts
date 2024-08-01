@@ -18,3 +18,5 @@ router.post(
   upload.single("imageFile"),
   MyRestaurantController.createMyRestaurant
 );
+
+export default router;

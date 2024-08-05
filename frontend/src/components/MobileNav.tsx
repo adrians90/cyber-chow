@@ -22,7 +22,7 @@ const MobileNav = () => {
         <SheetTitle>
           {isAuthenticated ? (
             <span className="flex items-center font-bold gap-2">
-              <CircleUserRound className="text-zinc-950" />
+              <CircleUserRound className="text-zinc-950 hidden md:block" />
               {user?.email}
             </span>
           ) : (

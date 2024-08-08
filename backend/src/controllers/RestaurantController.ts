@@ -68,3 +68,7 @@ const searchRestaurant = async (req: Request, res: Response) => {
     res.status(500).json({ error: "Something went wrong" });
   }
 };
+
+export default {
+  searchRestaurant,
+};

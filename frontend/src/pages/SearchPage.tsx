@@ -14,7 +14,7 @@ const SearchPage = () => {
   const [searchState, setSearchState] = useState<SearchState>({
     searchQuery: "",
   });
-  const { results, isLoading } = useSearchRestaurants(city);
+  const { results, isLoading } = useSearchRestaurants(searchState, city);
 
   const setSearchQuery = (searchFormData: SearchForm) => {
     setSearchState((prevState) => ({
@@ -45,7 +45,7 @@ const SearchPage = () => {
         <SearchBar
           searchQuery={searchState.searchQuery}
           onSubmit={setSearchQuery}
-          placeHolder="Search by Cuisine or Restaurant Name"
+          placeHolder="Search Cuisine or Restaurant"
           onReset={resetSearch}
         />
         <SearchResultInfo total={results.pagination.total} city={city} />

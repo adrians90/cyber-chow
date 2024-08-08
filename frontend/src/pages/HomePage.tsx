@@ -11,7 +11,7 @@ const HomePage = () => {
   };
   return (
     <div className="flex flex-col gap-12">
-      <div className="bg-gradient-to-t from-zinc-50 via-violet-100 to-violet-300 rounded-lg shadow-lg py-8 flex flex-col gap-5 text-center -mt-16">
+      <div className="md:px-32 bg-gradient-to-t from-zinc-50 via-violet-100 to-violet-300 rounded-lg shadow-lg py-8 flex flex-col gap-5 text-center -mt-16">
         <h1 className="text-5xl font-bold tracking-tight">
           Night City's preem kibble
         </h1>

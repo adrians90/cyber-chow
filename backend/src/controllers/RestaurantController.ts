@@ -40,6 +40,29 @@ const searchRestaurant = async (req: Request, res: Response) => {
         },
       ];
     }
+
+    const pageSize = 10;
+
+    const skip = (page - 1) * pageSize;
+
+    const restaurants = await Restaurant.find(query)
+      .sort({ [sortOption]: 1 })
+      .skip(skip)
+      .limit(pageSize)
+      .lean();
+
+    const total = await Restaurant.countDocuments(query);
+
+    const response = {
+      data: restaurants,
+      pagination: {
+        total,
+        page,
+        pages: Math.ceil(total / pageSize),
+      },
+    };
+
+    res.json(response);
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Something went wrong" });

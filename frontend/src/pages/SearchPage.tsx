@@ -30,6 +30,7 @@ const SearchPage = () => {
     setSearchState((prevState) => ({
       ...prevState,
       searchQuery: searchFormData.searchQuery,
+      page: 1,
     }));
   };
 
@@ -37,6 +38,7 @@ const SearchPage = () => {
     setSearchState((prevState) => ({
       ...prevState,
       searchQuery: "",
+      page: 1,
     }));
   };
 

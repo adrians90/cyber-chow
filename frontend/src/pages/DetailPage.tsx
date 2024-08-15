@@ -91,7 +91,7 @@ const DetailPage = () => {
       restaurantId: restaurant._id,
       deliveryDetails: {
         name: userFormData.name,
-        addressline1: userFormData.addressLine1,
+        addressLine1: userFormData.addressLine1,
         city: userFormData.city,
         country: userFormData.country,
         email: userFormData.email as string,

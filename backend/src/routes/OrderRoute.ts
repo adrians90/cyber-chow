@@ -1,5 +1,6 @@
 import express from "express";
 import { jwtCheck, jwtParse } from "../middleware/auth";
+import OrderController from "../controllers/OrderController";
 
 const router = express.Router();
 
@@ -9,3 +10,5 @@ router.post(
   jwtParse,
   OrderController.createCheckoutSession
 );
+
+export default router;

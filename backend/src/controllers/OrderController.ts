@@ -1,6 +1,7 @@
 import Stripe from "stripe";
 import { Request, Response } from "express";
 import Restaurant, { MenuItemType } from "../models/restaurant";
+
 const stripe = new Stripe(process.env.STRIPE_API_KEY as string);
 
 const FRONTEND_URL = process.env.FRONTEND_URL as string;
@@ -36,6 +37,19 @@ const createCheckoutSession = async (req: Request, res: Response) => {
       checkoutSessionRequest,
       restaurant.menuItems
     );
+
+    const session = await createSession(
+      lineItems,
+      "TEST_ORDER_ID",
+      restaurant.deliveryPrice,
+      restaurant._id.toString()
+    );
+
+    if (!session.url) {
+      return res.status(500).json({ message: "Error creating stripe session" });
+    }
+
+    res.json({ url: session.url });
   } catch (error: any) {
     console.log(error);
     res.status(500).json({ message: error.raw.message });
@@ -67,4 +81,42 @@ const createLineItems = (
     };
     return line_item;
   });
+
+  return lineItems;
+};
+
+const createSession = async (
+  lineItems: Stripe.Checkout.SessionCreateParams.LineItem[],
+  orderId: string,
+  deliveryPrice: number,
+  restaurantId: string
+) => {
+  const sessionData = await stripe.checkout.sessions.create({
+    line_items: lineItems,
+    shipping_options: [
+      {
+        shipping_rate_data: {
+          display_name: "Delivery",
+          type: "fixed_amount",
+          fixed_amount: {
+            amount: deliveryPrice,
+            currency: "gbp",
+          },
+        },
+      },
+    ],
+    mode: "payment",
+    metadata: {
+      orderId,
+      restaurantId,
+    },
+
+    success_url: `${FRONTEND_URL}/order-status?success=true`,
+    cancel_url: `${FRONTEND_URL}/detail/${restaurantId}?cancelled=true`,
+  });
+  return sessionData;
+};
+
+export default {
+  createCheckoutSession,
 };

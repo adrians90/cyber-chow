@@ -24,6 +24,8 @@ app.use(express.json());
 
 app.use(cors());
 
+app.use("/api/order/checkout/webhook", express.raw({ type: "*/*" }));
+
 app.get("/health", async (req: Request, res: Response) => {
   res.send({ message: "health OK!" });
 });

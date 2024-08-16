@@ -5,6 +5,8 @@ Built with cutting-edge technologies including React, Node.js, MongoDB, React Qu
 
 
 **Key Features:**
+
+
 **User Authentication:** Powered by Auth0, ensuring a secure and seamless sign-up and login experience.
 
 **Explore & Order:** Browse through a selection of restaurants, each with its own menu, and order your favorite dishes with just a few clicks.

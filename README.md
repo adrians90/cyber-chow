@@ -1,7 +1,7 @@
 **Cyber Chow: A Cyberpunk-Themed Food Delivery Web Application**
 
 Welcome to Cyber Chow, a futuristic, cyberpunk-themed food delivery web application that takes your dining experience to the next level. 
-Built with cutting-edge technologies including React, Node.js, MongoDB, React Query, and TailwindCSS, Cyber Chow offers a sleek and immersive user interface.
+Built with cutting-edge technologies including TypeScript, React, Node.js, MongoDB, React Query, and TailwindCSS, Cyber Chow offers a sleek and immersive user interface.
 
 
 **Key Features:**

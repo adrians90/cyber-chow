@@ -12,7 +12,7 @@ import {
 } from "./ui/select";
 import { ORDER_STATUS } from "@/config/order-status-config";
 import { useUpdateMyRestaurantOrder } from "@/api/MyRestaurantApi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
   order: Order;
@@ -20,6 +20,10 @@ type Props = {
 
 const OrderItemCard = ({ order }: Props) => {
   const [status, setStatus] = useState<OrderStatus>(order.status);
+
+  useEffect(() => {
+    setStatus(order.status);
+  }, [order.status]);
   const { updateRestaurantStatus, isLoading } = useUpdateMyRestaurantOrder();
 
   const handleStatusChange = async (newStatus: OrderStatus) => {

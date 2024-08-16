@@ -6,10 +6,15 @@ Built with cutting-edge technologies including React, Node.js, MongoDB, React Qu
 
 **Key Features:**
 **User Authentication:** Powered by Auth0, ensuring a secure and seamless sign-up and login experience.
+
 **Explore & Order:** Browse through a selection of restaurants, each with its own menu, and order your favorite dishes with just a few clicks.
+
 **Manage Your Restaurant:** Have a restaurant in the city? Add it to the platform, manage your menu, and track orders effortlessly.
+
 **Optimised User Experience:** Leveraging React Query for efficient data fetching and React Router for smooth navigation, the app provides a fast and responsive experience.
+
 **Validation & Security:** Zod is integrated for robust data validation, ensuring that all user inputs are secure and accurate.
+
 
 
 **Live Link:**
